@@ -1,3 +1,4 @@
 FROM python:slim
-COPY . /src
+WORKDIR user/local/python
+COPY . src/index.py
 CMD [ "python","/src/index.py"]
