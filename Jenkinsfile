@@ -1,6 +1,6 @@
 pipeline {
     environment {
-       registry = "arunakilan/python-demo"
+       registry = "arunakilan/py-demo"
        registryCredential = 'dockerhub'
        dockerImage = ''
     }
