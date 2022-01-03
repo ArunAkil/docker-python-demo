@@ -5,10 +5,7 @@ pipeline {
        dockerImage = ''
     }
     agent any
-    tools {
-       docker 'Docker 20.10.11'
-    }
-    stages {
+       stages {
         stage('Cloning Git') {
             steps {
                git 'https://github.com/ArunAkil/docker-python-demo.git'
