@@ -1,7 +1,7 @@
 pipeline {
     environment {
        registry = "arunakilan/python-demo"
-       registryCredential = 'dockerhub'
+       registryCredential = 'docker'
        dockerImage = ''
     }
     agent any
@@ -23,7 +23,7 @@ pipeline {
                 script {
                     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
                         dockerImage.push("${env.BUILD_NUMBER}")
-                        dockerImage.push("v1")
+                        dockerImage.push("latest")
                     }
                 }
             }
