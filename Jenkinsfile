@@ -29,7 +29,12 @@ pipeline {
         }
            stage('run') {
                steps {
+                   echo "docker pull started"
+                   sh 'docker pull arunakilan/python-demo:19'
+                   echo "docker pull end"
+                   echo "docker run"
                    sh 'docker run -d -it --name pythonweb -p 9090:8080 arunakilan/python-demo:19'
+                   echo "container executed successfully"
                    }
            }
     }
