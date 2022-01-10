@@ -29,10 +29,8 @@ pipeline {
         }
            stage('run') {
                steps {
-                   script{
-                       dockerRun = docker run -d -it --name pythonweb -p 9090:8080 arunakilan/python-demo:19
+                   sh 'docker run -d -it --name pythonweb -p 9090:8080 arunakilan/python-demo:19'
                    }
-               }
            }
     }
 }
