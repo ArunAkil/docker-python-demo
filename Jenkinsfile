@@ -27,10 +27,10 @@ pipeline {
                 }
             }
         }
-           stage('start container') {
+           '''stage('start container') {
                steps {
                    sh 'docker start myownserver'
                    }
-           }
+           }'''
     }
 }
