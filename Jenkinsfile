@@ -27,10 +27,5 @@ pipeline {
                 }
             }
         }
-           '''stage('start container') {
-               steps {
-                   sh 'docker start myownserver'
-                   }
-           }'''
-    }
+     }
 }
